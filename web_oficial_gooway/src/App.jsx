@@ -6,15 +6,20 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  // const items = [
+  //   { id: 1, image: "/assets/naturaleza.jpg", title: "Naturaleza" },
+  //   { id: 2, image: "/assets/naturaleza.jpg", title: "Náutico" },
+  //   { id: 3, image: "/assets/naturaleza.jpg", title: "Romance" },
+  //   { id: 4, image: "/assets/naturaleza.jpg", title: "Sol y Playa" },
+  // ];
   return (
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        
+      {/* <Carousel items={items} /> */}
       </div>
       <h1>Vite + React</h1>
       <div className="card">
@@ -31,5 +36,6 @@ function App() {
     </>
   )
 }
+import Carousel from './components/carousel/Carousel'
 
 export default App

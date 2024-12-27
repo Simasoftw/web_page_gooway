@@ -3,8 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const Arrow = ({ className, style, onClick, direction }) => {
   return (
@@ -13,7 +13,7 @@ const Arrow = ({ className, style, onClick, direction }) => {
       onClick={onClick}
     >
       {direction === "prev" ? (
-        <ArrowBackIosIcon style={{ fontSize: "20px", }} />
+        <ArrowBackIosIcon style={{ fontSize: "20px" }} />
       ) : (
         <ArrowForwardIosIcon style={{ fontSize: "20px" }} />
       )}
@@ -21,9 +21,9 @@ const Arrow = ({ className, style, onClick, direction }) => {
   );
 };
 
-const Carousel = () => {
+const Carousel = ({ items }) => {
   const settings = {
-    dots: false, // Deshabilitar los puntitos
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -51,13 +51,6 @@ const Carousel = () => {
       },
     ],
   };
-
-  const items = [
-    { id: 1, image: "naturaleza.jpg", title: "Naturaleza" },
-    { id: 2, image: "naturaleza.jpg", title: "Náutico" },
-    { id: 3, image: "naturaleza.jpg", title: "Romance" },
-    { id: 4, image: "naturaleza.jpg", title: "Sol playa" },
-  ];
 
   return (
     <div className="carousel-container">
