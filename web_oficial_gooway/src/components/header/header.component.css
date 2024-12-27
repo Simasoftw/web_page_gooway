@@ -1,0 +1,99 @@
+/* Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+}
+
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    gap: 5px;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* User Actions */
+.user-actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .header-content.open {
+        display: flex;
+    }
+
+    .search-bar,
+    .user-actions {
+        width: 100%;
+    }
+
+    .search-bar input {
+        width: calc(100% - 45px);
+        /* Ajusta el ancho considerando el botón */
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
